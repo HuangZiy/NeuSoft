@@ -1,0 +1,202 @@
+1．实现一个名为Person的类和它的子类Employee，Employee有两个子类Faculty和Staff。具体要求如下：
+
+（1）Person类中的属性有：姓名name（String类型）、地址address（String类型）、电话号码telephone（String类型）和电子邮件地址email（String类型）。
+
+（2）Employee类中的属性有：办公室office（String类型）、工资wage（double类型）和受雇日期hiredate（String类型）。
+
+（3）Faculty类中的属性有：学位degree（String类型）、级别level（String类型）。
+
+（4）Staff类中的属性有：职务称号duty（String类型）。
+
+
+
+
+2．在包a中编写一个类Father，具有属性：年龄（私有）、姓名（公有）；具有功能：工作（公有）、开车（公有）。在包a中编写一个子类Son，具有属性：年龄（受保护的）、姓名；具有功能：玩（私有）、学习（公有）。最后在包b中编写测试类Test，在测试类的main方法中测试类Father与类Son。
+
+
+
+
+3．编写一个Vihcle类，具有final类型的属性品牌，具有功能drive；定义其子类Car，具有属性：价格、型号；具有功能：变速；定义测试类E，在其main方法中分别创建Car的两个对象Aodi和Benchi，并测试对象的特性。
+
+
+
+
+5．按要求编写一个Java应用程序：
+
+（1）定义一个矩形类Rect，包含两个protected属性：矩形的宽width和高height。一个带有两个参数的构造方法，用于将width和height属性初始化。一个不带参数的构造方法，将矩形的宽和高都初始化为10。还有两个一般方法：求矩形面积的方法getArea()和求矩形周长的方法getPerimeter()。
+
+（2）通过继承Rect类编写一个具有确定位置的矩形类PlainRect，其确定位置用矩形的左上角坐标来标识，有两个属性：矩形左上角坐标startX和startY。两个构造方法：一个是带4个参数的构造方法，用于对startX、startY、width和height属性初始化。一个是不带参数的构造方法，将矩形初始化为左上角坐标、长和宽都为0的矩形。
+
+添加一个方法：判断某个点是否在矩形内部的方法isInside(doublex,double y)。如在矩形内，返回true, 否则，返回false。提示：点在矩形内是指满足条件x >= startX && x <= (startX + width) && y >=(startY - height) && y <= startY
+
+（3）编写PlainRect类的测试程序，创建一个左上角坐标为（10，10），长为20，宽为10的矩形对象；计算并打印输出矩形的面积和周长；判断点(25.5，13)是否在矩形内，并打印输出相关信息。
+
+
+
+
+6．按要求编写一个Java应用程序：
+
+（1）定义一个类，描述一个矩形，包含有长、宽两种属性和计算面积方法。
+
+（2）编写一个类，继承自矩形类，同时该类描述长方体，具有长、宽、高属性和计算体积的方法。
+
+（3）编写一个测试类，对以上两个类进行测试，创建一个长方体，定义其长、宽、高，输出其底面积和体积。
+
+
+
+
+7．编写一个类A，该类创建的对象可以调用方法f输出小写的英文字母表。然后再编写一个A类的子类B，要求子类B必须继承A类的方法f（不允许重写），子类B创建的对象不仅可以调用方法f输出小写的英文字母表，而且可以调用子类新增的方法g输出大写的英文字母表。最后编写测试类C，在测试类的main方法中测试类A与类B。
+
+
+
+
+8．编写一个Java应用程序，该程序包括3个类：Monkey、People类和测试类E。要求：
+
+（1）Monkey中有个构造方法：Monkey (String s)，并且有个public void speak()方法，在speak方法中输出“咿咿呀呀……”的信息。
+
+（2）People是Monkey的子类，在People类中重写父类的方法speak(),在speak方法中输出“别说话！”的信息。
+
+（3）在People类中新增方法void think()，在think方法中输出“认真思考！”。
+
+（4）在测试类E的main方法中创建Monkey与People的对象来测试这两个类的功能。
+
+
+
+
+9．编写一个Java应用程序，设计一个汽车类Vehicle，包含的属性有车轮个数wheels和车重weight。小车类Car是Vehicle的子类，其中包含的属性有载人数loader。卡车类Truck是Car类的子类，其中包含的属性有载重量payload。每个类都有构造方法和输出相关数据的方法。最后，写一个测试类来测试这些类的功能。
+
+
+
+
+10．编写一个Shape类，具有属性：周长和面积；定义其子类三角形和矩形，分别具有求周长的方法。定义测试类E，在其main方法中创建三角形和矩形类的对象，并赋给Shape类的对象a、b，使用对象a、b来测试其特性。
+
+
+
+
+11．编写一个Java应用程序，该程序包括3个类： A类、B类和测试类E。其中类B是类A的子类，在子类B中新增了成员变量和成员方法，并且隐藏了父类A的成员变量和重写了父类A的成员方法。在测试类E的main方法中，创建类B的对象并赋给父类A的对象a，使用上转型对象a来测试上转型对象的一些特性。
+
+
+
+
+
+
+
+12．（*）编写一个Java应用程序，要求实现如下类之间的继承关系：
+
+
+
+
+（1）编写一个抽象类Shape，该类具有两个属性：周长length和面积area，具有两个抽象的方法：计算周长getLength()和计算面积getArea()。
+
+
+
+
+（2）编写非抽象类矩形Rectangle和圆形Circle继承类Shape。
+
+
+
+
+（3）编写一个锥体类Cone，里面包含两个成员变量Shape类型的底面bottom和double类型的高height。
+
+
+
+
+（4）定义一个公共的测试类TestShape，包含一个静态的方法void compute(Shape e)，通过该方法能够计算并输出一切图形的周长和面积；在主方法中调用compute方法，计算并输出某矩形和圆形的周长和面积，并测试锥体类Cone。
+
+
+
+
+13．（*）按如下要求编写Java应用程序：
+
+（1）编写一个抽象类Number，只含有一个抽象方法void method()。
+
+（2）编写一个非抽象类Perfect继承类Number，在实现voidmethod()时，要求输出2到1000之间的所有完数（一个数如果恰好等于除它本身外的因子之和，这个数就称为完数。例如：6 = 1 ＋ 2 ＋ 3）。
+
+（3）编写一个非抽象类Prime继承类Number，在实现voidmethod()时，要求输出2到100之间的所有素数（素数是指在一个大于1的自然数中，除了1和此整数自身外，无法被其他自然数整除的数，比如：3、5、7、11等）。
+
+（4）编写测试类Test，在其main方法中测试类Perfect和Prime的功能。
+
+
+
+
+14．（*）利用接口做参数，写个计算器，能完成加减乘除运算。
+
+（1）定义一个接口Compute含有一个方法int computer(int n, int m)。
+
+（2）设计四个类分别实现此接口，完成加减乘除运算。
+
+（3）设计一个类UseCompute，类中含有方法：public void useCom(Compute com, int one, int two)，此方法能够用传递过来的对象调用computer方法完成运算，并输出运算的结果。
+
+（4）设计一个测试类Test，调用UseCompute中的方法useCom来完成加减乘除运算。
+
+
+
+
+15．（*）按如下要求编写Java应用程序：
+
+（1）编写一个用于表示战斗能力的接口Fightable，该接口包含：整型常量MAX；方法void win()，用于描述战斗者获胜后的行为；方法int injure(int x)，用于描述战斗者受伤后的行为。
+
+（2）编写一个非抽象的战士类Warrior，实现接口Fightable。该类中包含两个整型变量：经验值experience和血液值blood。当战士获胜后经验值会增加，而受伤后血液值会减少x，并且当战斗者的血液值低于MAX时会输出危险提示。
+
+（3）编写战士类Warrior的子类BloodWarrior，该类创建的战士在血液值低于MAX/2时才会输出危险提示。
+
+（4）编写测试类TestWarrior，对上述接口和类进行测试。
+
+
+
+
+16．（*）按如下要求编写Java程序：
+
+（1）编写一个接口：OneToN，只含有一个方法int dispose(int n)。
+
+（2）编写一个非抽象类Sum来实现接口OneToN，实现int dispose (int n)接口方法时，要求计算1 + 2 + … + n。
+
+（3）编写另一个非抽象类Pro来实现接口OneToN，实现int dispose (int n)接口方法时，要求计算1 * 2 * … * n。
+
+（4）编写测试类Test，在main方法中使用接口回调技术来测试实现接口的类。
+
+
+
+
+17．（*）按如下要求编写Java程序：
+
+（1）编写接口InterfaceA，接口中含有方法void printCapitalLetter()。
+
+（2）编写接口InterfaceB，接口中含有方法void printLowercaseLetter()。
+
+（3）编写非抽象类Print，该类实现了接口InterfaceA和InterfaceB。要求printCapitalLetter()方法实现输出大写英文字母表的功能，printLowercaseLetter()方法实现输出小写英文字母表的功能。
+
+（4）再写一个测试类Test，在main方法中创建Print的对象并赋值给InterfaceA的变量a，由变量a调用printCapitalLetter方法，然后再创建Print的对象并将该对象赋值给InterfaceB的变量b，由变量b调用printLowercaseLetter方法。
+
+
+
+
+18.（*）按如下要求编写Java程序：
+
+（1）定义一个交通工具收费接口Charge，该接口包含两个元素：一个收取费用的方法double getFee(intdistance)，distance代表交通工具行驶的公里数；一个成员变量MAX，表示每次收取费用的最大值。
+
+（2）定义列车类Train来实现这个接口，收费规则自行定义。
+
+（3）定义测试类Test，在main方法中输出收取费用的最大值，和行使2000公里后列车应收取的费用。
+
+
+
+
+19.（*）设计一个Student接口，以一维数组存储一个班级的学生姓名。该接口中有一个抽象方法getStudentName()。设计一个类Union，该类实现接口Student中的方法getStudentName()，其功能是获取学生姓名并显示。
+
+
+
+
+20（*）按如下要求编写Java程序：
+
+（1）定义接口A，里面包含值为3.14的常量PI和抽象方法double area()。
+
+（2）定义接口B，里面包含抽象方法void setColor(String c)。
+
+（3）定义接口C，该接口继承了接口A和B，里面包含抽象方法void volume()。
+
+（4）定义圆柱体类Cylinder实现接口C，该类中包含三个成员变量：底圆半径radius、
+
+圆柱体的高height、颜色color。
+
+（5）创建测试类来测试类Cylinder。

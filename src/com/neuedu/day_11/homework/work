@@ -1,0 +1,302 @@
+一、工具类和集合编程题
+
+1．从键盘接收三个double型变量a、b、c，判断方程ax2+ bx + c = 0是否有实数解。如果有实数解则输出其解，否则输出“方程无实数解”。
+
+
+
+
+2．设计一个Test类，要求从键盘上录入5个字符串数据，保存在一个List中，并输出所有包含"a"的元素。
+
+
+
+
+3．定义一个字符串类型的集合，将字符串类型的元素按照字典次序从前向后排列后，输出所有元素，并找出最大值和最小值
+
+
+
+
+二、程序推断题（要求代码上机）
+
+1、推测程序运行结果
+
+ public static void main(String[] args){
+
+String str = "null";
+
+if (str == null) {
+
+System.out.println("null");
+
+}else if (str.length() == 0) {
+
+ System.outprintln("zero");
+
+}else{
+
+ System.out.println("some");
+
+}
+
+}
+
+2、推测运行结果
+
+class J_Test
+
+{
+
+  public static void main(String args[])
+
+  {
+
+    String [] s={”1”,”2”}；
+
+    mb_swap(s[0]，s[1])；
+
+    System.out.print(s[0]+s[1])；
+
+    }
+
+    static void mb_swap(String s0,String s1)
+
+    {
+
+    String t=s0；
+
+    s0=sl；
+
+    sl=t；
+
+  }
+
+
+
+
+3、假设s=”today”，则下面语句返回“day”的是哪些?
+
+(A)s．substring(2，5)；    (B)s．substring(2)：
+
+(C)s．substring(3)；     (D)s．substring(3，5)；
+
+4、推测运行结果
+
+public clasg J_Test
+
+ {
+
+String m_string=new String(“good”)；
+
+String m_array[]={”aaa”}；
+
+public void mb_method(String s, String[]sa)
+
+{
+
+  s=”bad”；
+
+  sa[0]=”bbb”；
+
+}
+
+public static void main(String args[])
+
+{
+
+  J_Test a=new J_Test()；
+
+  a.mb_method(a.m_string，a.m_array)；
+
+  System.out.println(a.m_string + a.m_array[0])；
+
+}
+
+}
+
+5、推测运行结果
+
+class J_StringBuffer
+
+{
+
+  public static void maln(String args[])
+
+  {
+
+    StringBuffer a=new StringBuffer(”A”)；
+
+    StringBuffer b=new StringBuffer(”B”)；
+
+    mb_operate(a，b)；
+
+    System．out．println(a+”．”+b)；
+
+  }／／方法main结束
+
+static void mb_operate(StringBuffer x，StringBuffer y)
+
+{
+
+    x.append(y)；
+
+    y=new StringBuffer(”AB”)；
+
+  }／／方法mb_operate结束
+
+}／／类J_StringBuffer结束
+
+6、推测运行结果
+
+假定声明变量byte x=10
+
+以下有四个重载方法：
+
+Void test(int x){
+
+System.out.println(“int”);
+
+}
+
+Void test(long x){
+
+System.out.println(“long”);
+
+}
+
+Void test(Integer x){
+
+System.out.println(“Integer”);
+
+}
+
+Void test(Long x){
+
+System.out.println(“Long”);
+
+}
+
+
+
+
+7、推测代码运行结果
+
+public class StringA {
+
+    public static void main(String[] args){
+
+        String s1 = "hello";
+
+        String s2 = "hello";
+
+        String s3 = new String("hello");
+
+        String s4 = new String("hello");
+
+
+
+       System.out.println(s1.equals(s2));
+
+        System.out.println(s2.equals(s3));
+
+        System.out.println(s3.equals(s4));
+
+        System.out.println(s1 == s2);
+
+        System.out.println(s2 == s3);
+
+        System.out.println(s3 == s4);
+
+
+
+
+String sa = "ab";
+
+String sb = "cd";
+
+String sab=sa+sb;
+
+String s="abcd";
+
+System.out.println(sab==s);
+
+sab=sa.concat(sb);
+
+System.out.println(sab==s);
+
+System.out.println(sab.equals(s));
+
+
+
+
+String sc="ab"+"cd";
+
+String sd="abcd";
+
+System.out.println(sc==sd);
+
+
+
+
+String str = "String";
+
+        String anotherStr = "string";
+
+        Object objstr = str;
+
+        System.out.println(str.compareTo(anotherStr));
+
+        System.out.println(str.compareToIgnoreCase(anotherStr));
+
+        System.out.println(str.compareTo(objstr.toString()));
+
+
+
+
+StringBuffer str1 = new StringBuffer("abc");
+
+StringBuffer str2 = new StringBuffer("abc");
+
+System.out.println(str1==str2);
+
+System.out.println(str1.toString()==str2.toString());
+
+System.out.println(str1.equals(str2));
+
+String a=str1.toString();
+
+String b=str2.toString();
+
+System.out.println(a==b);
+
+System.out.println(a.equals(b));
+
+
+
+
+
+
+
+    }
+
+}
+
+8、推断代码运行结果
+
+public class Palindrome {
+
+public static void main(String[] args) {
+
+StringBuffer str1 = new StringBuffer("hjh");
+
+StringBuffer tmp = new StringBuffer(str1);
+
+StringBuffer str2 = new StringBuffer(tmp.reverse());
+
+System.out.println(str1);
+
+System.out.println(str2);
+
+System.out.println(str1.equals(str2));
+
+}
+
+}
