@@ -125,16 +125,13 @@ public class Business {
 
     @Override
     public String toString() {
-        return "Business{" +
-                "bid=" + bid +
-                ", aid=" + aid +
-                ", bacc='" + bacc + '\'' +
-                ", pwd='" + pwd + '\'' +
-                ", bname='" + bname + '\'' +
-                ", baddress='" + baddress + '\'' +
-                ", binfo='" + binfo + '\'' +
-                ", bsf=" + bsf +
-                ", bdf=" + bdf +
-                '}';
+        return "[" +
+                "商家编号=" + bid +
+                ", 商家名称='" + bname + '\'' +
+                ", 商家地址='" + baddress + '\'' +
+                ", 商家介绍='" + binfo + '\'' +
+                ", 起送费=" + bsf +
+                ", 配送费=" + bdf +
+                ']';
     }
 }

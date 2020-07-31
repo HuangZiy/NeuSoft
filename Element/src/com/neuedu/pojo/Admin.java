@@ -62,10 +62,10 @@ public class Admin {
 
     @Override
     public String toString() {
-        return "Admin{" +
+        return "[" +
                 "aid=" + aid +
                 ", apwd='" + apwd + '\'' +
                 ", aname='" + aname + '\'' +
-                '}';
+                ']';
     }
 }

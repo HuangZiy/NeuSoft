@@ -73,12 +73,11 @@ public class Food {
 
     @Override
     public String toString() {
-        return "Food{" +
-                "fid=" + fid +
-                ", bid=" + bid +
-                ", fname='" + fname + '\'' +
-                ", finfo='" + finfo + '\'' +
-                ", fprice=" + fprice +
-                '}';
+        return "[" +
+                "食品编号=" + fid +
+                ", 食品名称='" + fname + '\'' +
+                ", 食品介绍='" + finfo + '\'' +
+                ", 食品价格=" + fprice +
+                ']';
     }
 }

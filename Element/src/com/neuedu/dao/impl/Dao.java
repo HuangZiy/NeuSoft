@@ -211,14 +211,15 @@ public class Dao implements AdminDao, BusinessDao, FoodDao {
             ps.setInt(1,a.getAid());
             rs=ps.executeQuery();
             while (rs.next()){
-                String bacc=rs.getString("bacc");
-                String pwd=rs.getString("pwd");
-                String bname=rs.getString("bname");
-                String baddress=rs.getString("baddress");
-                String binfo=rs.getString("binfo");
-                double bsf=rs.getDouble("bsf");
-                double bdf=rs.getDouble("bdf");
-                Business b = new Business(bacc,pwd,bname,baddress,binfo,bsf,bdf);
+                int bid = rs.getInt("bid");
+                String bacc = rs.getString("bacc");
+                String pwd = rs.getString("pwd");
+                String bname = rs.getString("bname");
+                String baddress = rs.getString("baddress");
+                String binfo = rs.getString("binfo");
+                double bsf = rs.getDouble("bsf");
+                double bdf = rs.getDouble("bdf");
+                Business b = new Business(bid, bacc, pwd, bname, baddress, binfo, bsf, bdf);
                 blist.add(b);
             }
             return blist;

@@ -120,31 +120,31 @@ public class BusinessViewImpl implements BusinessView {
         boolean flag = true;
         while (flag) {
             System.out.println("是否修改商家名称(请输入y&n)：");
-            if (sc.nextLine().equals("y")) {
+            if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
-                b.setBname(sc.nextLine());
+                b.setBname(sc.next());
                 flag = false;
             }
             System.out.println("是否修改商家地址(请输入y&n)：");
-            if (sc.nextLine().equals("y")) {
+            if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
-                b.setBaddress(sc.nextLine());
+                b.setBaddress(sc.next());
                 flag = false;
             }
             System.out.println("是否修改商家介绍(请输入y&n)：");
-            if (sc.nextLine().equals("y")) {
+            if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
-                b.setBinfo(sc.nextLine());
+                b.setBinfo(sc.next());
                 flag = false;
             }
             System.out.println("是否修改商家起送费(请输入y&n)：");
-            if (sc.nextLine().equals("y")) {
+            if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
                 b.setBsf(sc.nextDouble());
                 flag = false;
             }
             System.out.println("是否修改商家配送费(请输入y&n)：");
-            if (sc.nextLine().equals("y")) {
+            if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
                 b.setBdf(sc.nextDouble());
                 flag = false;
@@ -237,9 +237,9 @@ public class BusinessViewImpl implements BusinessView {
         boolean flag = true;
         while (flag) {
             System.out.println("请输入食品名称：");
-            String fname = sc.nextLine();
+            String fname = sc.next();
             System.out.println("请输入食品介绍：");
-            String finfo = sc.nextLine();
+            String finfo = sc.next();
             System.out.println("请输入食品价格：");
             double fprice = sc.nextDouble();
             Food f = new Food(fname, finfo, fprice);
@@ -266,13 +266,13 @@ public class BusinessViewImpl implements BusinessView {
             System.out.println("是否修改食品名称(请输入y&n)：");
             if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
-                b.setFname(sc.nextLine());
+                b.setFname(sc.next());
                 flag = false;
             }
             System.out.println("是否修改食品介绍(请输入y&n)：");
             if (sc.next().equals("y")) {
                 System.out.print("请输入修改信息：");
-                b.setFinfo(sc.nextLine());
+                b.setFinfo(sc.next());
                 flag = false;
             }
             System.out.println("是否修改食品价格(请输入y&n)：");

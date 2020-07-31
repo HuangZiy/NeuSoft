@@ -65,7 +65,6 @@ public class AdminViewImpl implements AdminView {
             if (abi.regisBsn(a, b)) {
                 System.out.println("添加成功！");
                 flag = false;
-                Menu(a);
             } else {
                 System.out.println("添加失败！请重新填写信息！");
             }
