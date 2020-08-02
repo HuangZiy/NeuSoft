@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Element/Element.iml" filepath="$PROJECT_DIR$/Element/Element.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NeuSoft.iml" filepath="$PROJECT_DIR$/NeuSoft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Neusoft.iml" filepath="$PROJECT_DIR$/Neusoft.iml" />
     </modules>
   </component>
 </project>
