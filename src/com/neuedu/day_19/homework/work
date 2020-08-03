@@ -1,0 +1,762 @@
+二、Java编程作业
+
+
+
+1、推测运行结果
+
+Given:
+
+1. public class Test{
+
+2. public static void main(String[] args){
+
+3. int x = 5;
+
+2
+
+4. boolean b1 = true;
+
+5. boolean b2 = false;
+
+6.
+
+7. if((x==4) && !b2)
+
+8. System.out.print("1 ");
+
+9. System.out.print("2 ");
+
+10. if((b2=true) && b1)
+
+11. System.out.print("3 ");
+
+12. }
+
+13. }
+
+结果：2 3
+
+2、推测运行结果
+
+Given:
+1. class Alligator{
+2. public static void main(String[] args){
+3. int[]x[] = {{1,2},{3,4,5},{6,7,8,9}};
+6
+4. int[][]y = x;
+5. System.out.print(y[2][1]);
+6. }
+7. }
+What is the result?
+
+结果：7
+
+3、推测结果
+
+Given:
+
+11. class Person{
+
+12. String name = "No name";
+
+13. public Person(String nm){name = nm;}
+
+14. }
+
+15.
+
+16. class Employee extends Person{
+
+17. String empID = "0000";
+
+18. public Employee(String id){empID = id;}
+
+19. }
+
+20.
+
+21. class EmployeeTest{
+
+22. public static void main(String[] args){
+
+23. Employee e = new Employee("4321");
+
+24. System.out.println(e.empID);
+
+25. }
+
+26. }
+
+编译错误
+
+
+4、推测运行结果
+
+Given:
+
+1. class Pass{
+
+2. public static void main(String[] args){
+
+3. int x = 5;
+
+4. Pass p = new Pass();
+
+5. p.doStuff(x);
+
+6. System.out.print(" main x = " + x);
+
+7. }
+
+8. void doStuff(int x){
+
+9. System.out.println(" doStuff x = " + x++);
+
+10. }
+
+11. }
+
+What is the result?
+
+ doStuff x = 5
+ main x = 5
+
+5、推测运行结果
+
+1. class Foo{
+
+2. private int x;
+
+3. public Foo(int x){this.x = x;}
+
+4. public void setX(int x){this.x = x;}
+
+5. public int getX(){return x;}
+
+6. }
+
+7.
+
+8. public class Gamma{
+
+9. static Foo fooBar(Foo foo){
+
+10. foo = new Foo(100);
+
+11. return foo;
+
+12. }
+
+13. public static void main(String[] args){
+
+14. Foo foo = new Foo(300);
+
+15. System.out.print(foo.getX() + "-");
+
+16.
+
+17. Foo fooFoo = fooBar(foo);
+
+18. System.out.print(foo.getX() + "-");
+
+19. System.out.print(fooFoo.getX() + "-");
+
+20.
+
+21. foo = fooBar(fooFoo);
+
+22. System.out.print(foo.getX() + "-");
+
+23. System.out.print(fooFoo.getX());
+
+24. }
+
+25. }
+
+What is the output?
+
+
+结果：300-300-100-100-100
+
+
+
+6、以下A-D代码中插入16行后会产生java.lang.ClassCastException异常的是？
+
+10. interface Foo{}
+
+11. class Alpha implements Foo{}
+
+12. class Beta extends Alpha{}
+
+13. class Delta extends Beta{
+
+14. public static void main(String[] args){
+
+15. Beta x = new Beta();
+
+16. //insert code here
+
+17. }
+
+18. }
+
+A. Alpha a = x;
+
+B. Foo f = (Delta)x;
+
+C. Foo f = (Alpha)x;
+
+D. Beta b = (Beta)(Alpha)x;
+
+
+
+结果：没有异常
+
+
+7、以下A-F中代码可以正确运行的是？
+
+Given:
+
+11. class ClassA{}
+
+12. class ClassB extends ClassA{}
+
+13. class ClassC extends ClassA{}
+
+and:
+
+21. ClassA p0 = new ClassA();
+
+22. ClassB p1 = new ClassB();
+
+23. ClassC p2 = new ClassC();
+
+24. ClassA p3 = new ClassB();
+
+25. ClassA p4 = new ClassC();
+
+A. p0 = p1;  对
+
+B. p1 = p2,  错
+
+C. p2 = p4;  对
+
+D. p2 = (ClassC)p1;  错
+
+E. p1 = (ClassB)p3;  对
+
+F. p2 = (ClassC)p4;  对
+
+
+
+
+8、以下说法正确的是？
+
+Given:
+
+1. interface A{public void aMethod();}
+
+2. interface B { public void bMethod(); }
+
+3. interface C extends A, B { public void cMethod(); }
+
+4. class D implements B {
+
+5. public void bMethod(){}
+
+6. }
+
+7. class E extends D implements C {
+
+8. public void aMethod(){}
+
+9. public void bMethod(){}
+
+10. public void cMethod(){}
+
+11. }
+
+A. Compilation fails because of an error in line 3.
+
+B. Compilation fails because of an error in line 7.
+
+C. Compilation fails because of an error in line 9.
+
+D. If you define D e = new E(), then e.bMethod() invokes the version of bMethod() defined in Line 5.
+
+E. If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 5.
+
+F. If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 9
+
+
+B
+
+
+
+9、以下代码是否能编译成功？
+
+Given:
+
+11. public interface A{ public void m1(); }
+
+13. class B implements A{ }
+
+14. class C implements A{ public void m1(){}}
+
+15. class D implements A{ public void m1(int x){}}
+
+16. abstract class E implements A {}
+
+17. abstract class F implements A { public void m1(){} }
+
+18. abstract class G implements A { public void m1(int x){} }
+
+不能 13行，15行，18行
+
+
+10、以下代码运行结果是
+
+Given:
+
+3. interface Fish{}
+
+4. class Perch implements Fish{}
+
+5. class Walleye extends Perch{}
+
+6. class Bluegill{}
+
+7. public class Fisherman {
+
+8. public static void main(String[] args) {
+
+9. Fish f = new Walleye();
+
+10. Walleye w = new Walleye()
+
+11. Bluegill b = new Bluegill();
+
+12. if(f instanceof Perch) System.out.print("f-p ");
+
+13. if(w instanceof Fish) System.out.print("w-f ");
+
+14. if(b instanceof Fish) System.out.print("b-f ");
+
+15. }
+
+16. }
+
+f-p w-f
+
+
+
+
+
+
+
+
+
+
+
+11、推测程序运行结果
+
+Given:
+
+11. static void test() throws RuntimeException{
+
+12. try{
+
+13. System.out.print("test ");
+
+14. throw new RuntimeException();
+
+15. }
+
+16. catch(Exception ex){ System.out.print("exception ");}
+
+17. }
+
+18. public static void main(String[] args){
+
+19. try{test();}
+
+20. catch(RuntimeException ex){System.out.print("runtime ");}
+
+21. System.out.print("end ");
+
+22. }
+
+What is the result?
+
+
+test exception end
+
+
+
+
+12、如34行出现异常，可能的运行结果是？
+
+33. try{
+
+34. //some code here
+
+35. }catch(NullPointerException el){
+
+36. System.out.print("a");
+
+37. }catch(Exception e2){
+
+38. System.out.print("b");
+
+39. }finally{
+
+40. System.out.print("c");
+
+41. }
+
+bc或abc
+
+
+13、推测运行结果
+
+Given:
+
+5. import java.util.*;
+
+6. public class SortOf{
+
+7. public static void main(String[] args){
+
+8. ArrayList<Integer> a = new ArrayList<Integer>();
+
+9. a.add(1); a.add(5); a.add(3);
+
+10. Collections.sort(a);
+
+11. a.add(2);
+
+12. Collections.reverse(a);
+
+13. System.out.println(a);
+
+14. }
+
+15. }
+
+
+[1, 3, 5, 2]
+
+
+
+
+
+
+
+14、推测程序运行结果：
+
+public void go(){
+
+String o = "";
+
+z: for(int x=0; x<3; x++){
+
+      for(int y=0; y<2; y++){
+
+if(x == 1) break;
+
+if(x==2 && y==1) break z;
+
+o = o + x + y;
+
+}
+
+}
+
+System.out.println(o);
+
+}
+
+
+000120
+
+15、推测程序运行结果
+
+public class Breaker2{
+
+ static String o = "";
+
+ public static void main(String[] args){
+
+ z:
+
+ for(int x=2; x<7; x++){
+
+   if(x == 3) continue;
+
+   if(x == 5) break z;
+
+   o = o + x;
+
+  }
+
+   System.out.println(o);
+
+}
+
+}
+
+
+24
+
+
+16、推测程序运行结果
+
+class Atom{
+
+ Atom(){
+
+System.out.print("atom ");}
+
+}
+
+class Rock extends Atom{
+
+ Rock(String type){
+
+Super();
+
+System.out.print(type);}
+
+}
+
+public class Mountain extends Rock{
+
+Mountain(){
+
+ super();
+
+ new Rock("granite ");
+
+}
+
+ public static void main(String[] a){
+
+new Mountain();
+
+}
+
+}
+
+
+编译错误
+
+
+17、推测程序运行结果
+
+class X{
+
+ X(){
+
+System.out.print(1);
+
+}
+
+ X(int x){
+
+ this();
+
+ System.out.print(2);
+
+ }
+
+}
+
+public class Y extends X{
+
+ Y(){
+
+   super(6);
+
+   System.out.print(3);
+
+ }
+
+ Y(int y){
+
+   this();
+
+   System.out.println(4);
+
+ }
+
+  public static void main(String[] a){
+
+new Y(5);
+
+}
+
+ }
+
+
+ 1234
+
+
+ 18、程序运行结果推测
+
+ public class KungFu{
+
+   public static void main(String[] args){
+
+    Integer  x = 400;
+
+    Integer  y = x;
+
+    x++;
+
+    StringBuilder sb1 = new StringBuilder("123");
+
+    StringBuilder sb2 = sb1;
+
+    sb1.append("5");
+
+    System.out.println((x == y) + " " + (sb1 == sb2));
+
+  }
+
+ }
+
+false true
+
+
+
+ 19、程序运行结果推测
+
+ int x = 0;
+
+ int y = 10;
+
+ do{
+
+  y--;
+
+ ++x;
+
+ }while(x < 5);
+
+ System.out.print(x + "," + y);
+
+ 5,5
+
+ 20以下哪个方法可以插入类Vert的代码中
+
+ 1.public class Blip{
+
+ 2. protected int blipvert(int x){return 0;}
+
+ 3.}
+
+ 4.class Vert extends Blip{
+
+ 5. //insert code here
+
+ 6.}
+
+ A.public int blipvert(int x){return 0;}
+
+ B.private int blipvert(int x){return 0;}
+
+ C.private int blipvert(long x){return 0;}
+
+ D.protected long blipvert(int x){return 0;}
+
+ E.protected int blipvert(long x){return 0;}
+
+ F.protected long blipvert(long x){return 0;}
+
+ G.protected long blipvert(int x, int y){return 0;}
+
+
+CEFG
+
+
+ 21、推测程序运行结果
+
+ class Batman{
+
+  int squares = 81;
+
+
+
+  void go(){
+
+ incr(++squares);
+
+ System.out.println(squares);
+
+  }
+
+  void incr(int squares){
+
+ squares += 10;
+
+ }
+
+
+
+
+ }
+
+ class TestBatman{
+
+ public static void main(String[] args){
+
+ new Batman().go();
+
+ }
+
+ }
+
+
+82
+
+
+ 22、推测程序运行结果
+
+ class Foo{
+
+ public int a = 3;
+
+ public void addFive(){
+
+ a += 5;
+
+ System.out.print("f "); }
+
+ }
+
+ class Bar extends Foo{
+
+ public int a = 8;
+
+ public void addFive(){
+
+ this.a += 5;
+
+   System.out.print("b ");
+
+ }
+
+ }
+
+ class TestFoo{
+
+ public static void main(String [] args){
+
+ Foo f = new Bar();
+
+ f.addFive();
+
+ System.out.println(f. a);
+
+ }
+f 8
