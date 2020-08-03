@@ -20,7 +20,7 @@ public class work05 {
                 value++;
                 map.put(random, value);
                 if (flag) {
-                    System.out.println("第一次重复的数字是：" + random);
+                    System.out.println("第一次重复的数字是： " + random);
                     flag = false;
                 }
             } else {
